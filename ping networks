@@ -1,0 +1,15 @@
+@echo off
+setlocal enabledelayedexpansion
+
+REM List of IP addresses to ping
+set "ipAddresses=192.168.1.1 8.8.8.8 10.0.0.1"
+
+REM Loop through each IP address and ping
+for %%i in (%ipAddresses%) do (
+    echo Pinging %%i
+    ping -n 4 %%i
+    echo.
+)
+
+echo "Everything is done Arpit! Bye,Bye!"
+pause
